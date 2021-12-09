@@ -1,0 +1,80 @@
+.btn {
+	font-size: 1.6rem;
+	font-weight: 600;
+	border-radius: 1rem;
+	font-family: $font-secondary;
+	padding: 1.2rem 2.5rem;
+	@media only screen and (max-width: $tab-port) {
+		font-size: 14px;
+	}
+
+	&__outlined {
+		background: none;
+		border: 2px solid currentColor;
+		color: $color-primary;
+		&:hover {
+			background: $color-primary;
+			border-color: $color-primary;
+			color: #fff;
+		}
+	}
+
+	&__primary {
+		background: $color-primary;
+		border: 2px solid $color-primary;
+		padding: 1.2rem 8rem;
+		color: #fff;
+		&:hover {
+			background: none;
+			color: $color-primary;
+			border-color: currentColor;
+		}
+
+		&--small {
+			padding: 1.2rem 2.5rem;
+		}
+	}
+	&__secondary {
+		background: $color-secondary;
+		border: 2px solid $color-secondary;
+		padding: 1.2rem 4rem;
+		color: $color-bg-primary;
+		font-weight: 700;
+		&:hover {
+			background: none;
+			color: #fff;
+			border-color: currentColor;
+		}
+	}
+
+	&__dark {
+		background: #f2f2fa;
+		display: flex;
+		align-items: center;
+		padding: 1.2rem 2.5rem;
+		color: $color-text;
+		i {
+			width: 2rem;
+			height: 2rem;
+			background: #fff;
+			color: #000;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			padding-left: 2px;
+			margin-right: 1rem;
+			font-size: 1rem;
+		}
+
+		&:hover {
+			background: $color-bg-primary;
+			color: #fff;
+		}
+	}
+
+	&-full {
+		display: block;
+		width: 100%;
+	}
+}
