@@ -25,6 +25,7 @@ a:hover {
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 
 	@media only screen and (max-width: $laptop-port) {
 		font-size: 55%;

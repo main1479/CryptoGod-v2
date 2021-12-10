@@ -124,6 +124,7 @@ a:hover {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 64em) {
   html {
@@ -2242,10 +2243,20 @@ section.right-group {
 .slider__bg {
   position: absolute;
   height: 350px;
+  width: 40%;
   left: 0;
   bottom: 0;
   transform: translateY(-17%);
-  object-fit: cover;
+}
+@media only screen and (max-width: 48em) {
+  .slider__bg {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .slider__bg {
+    width: 70%;
+  }
 }
 
 section.bull-run {
@@ -2382,16 +2393,6 @@ section.elit-subs .elit__img {
     top: -88px;
     left: 75px;
     width: 274px;
-  }
-
-  .people-single {
-    position: relative;
-    left: 140px;
-  }
-
-  .social-icons {
-    position: relative;
-    right: -79px;
   }
 
   .owl-prev {

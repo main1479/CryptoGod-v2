@@ -751,10 +751,18 @@ section.right-group {
 .slider__bg {
 	position: absolute;
 	height: 350px;
+	width: 40%;
 	left: 0;
 	bottom: 0;
 	transform: translateY(-17%);
-	object-fit: cover;
+	// object-fit: cover;
+
+	@media only screen and (max-width: $tab-port) {
+		width: 60%;
+	}
+	@media only screen and (max-width: $mbl-land) {
+		width: 70%;
+	}
 }
 
 section.bull-run {
