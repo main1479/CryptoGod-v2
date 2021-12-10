@@ -7,6 +7,19 @@
 h1.heading {
 	font-size: 5.2rem;
 	line-height: 1.4;
+	position: relative;
+	.hat-element,
+	.bell-element {
+		position: absolute;
+		top: -30%;
+		left: 0;
+		transform: translateX(-50%);
+		width: clamp(4rem, 4vw, 6rem);
+	}
+	.hat-element {
+		top: -40%;
+		left: 1%;
+	}
 	@media only screen and (max-width: $tab-port) {
 		font-size: 4rem;
 	}
@@ -60,9 +73,10 @@ p.p__text {
 			font-size: 1.8rem;
 		}
 	}
-	@media only screen and (max-width: $tab-port) {
-		font-size: 16px;
-	}
+}
+
+.text__light {
+	opacity: 0.7;
 }
 
 .text__primary {

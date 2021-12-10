@@ -1,9 +1,10 @@
 .analytics {
-	padding-bottom: 20rem;
-	@media only screen and (max-width: $tab-port) {
-		padding-bottom: 8rem;
-	}
-
+	padding: 10rem 0;
+	margin-bottom: 10rem;
+	background: url(../img/analytics-bg.png);
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
 	&__content {
 		padding: 3rem 0;
 		margin-bottom: 3rem;

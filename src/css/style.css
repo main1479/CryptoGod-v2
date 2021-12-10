@@ -6,6 +6,19 @@
 h1.heading {
   font-size: 5.2rem;
   line-height: 1.4;
+  position: relative;
+}
+h1.heading .hat-element,
+h1.heading .bell-element {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  transform: translateX(-50%);
+  width: clamp(4rem, 4vw, 6rem);
+}
+h1.heading .hat-element {
+  top: -40%;
+  left: 1%;
 }
 @media only screen and (max-width: 48em) {
   h1.heading {
@@ -73,10 +86,9 @@ p.p__text-big {
     font-size: 1.8rem;
   }
 }
-@media only screen and (max-width: 48em) {
-  p.p__text {
-    font-size: 16px;
-  }
+
+.text__light {
+  opacity: 0.7;
 }
 
 .text__primary {
@@ -158,6 +170,10 @@ body {
 
 .header__content {
   padding-top: 15rem;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0px 24.15px 64.4px rgba(27, 42, 54, 0.3));
 }
 
 html,
@@ -1017,7 +1033,7 @@ table {
 .nav .menu__link:hover {
   color: #524fed;
 }
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width: 62em) {
   .nav .menu {
     position: fixed;
     top: 0;
@@ -1192,18 +1208,41 @@ table {
 }
 
 .pricing__card {
-  background: #1d1e42;
   padding: 4rem;
-  border-radius: 2rem;
   transition: all 0.3s;
-  border: 3px solid transparent;
   display: flex;
   flex-direction: column;
   min-height: 58rem;
+  box-shadow: 9px 11px 44px rgba(20, 20, 50, 0.04);
+  border-radius: 20px;
+  background: #fff;
+  position: relative;
+}
+.pricing__card .badge {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 1rem 2rem;
+  background: #000;
+  border-radius: 0;
+  color: #fff;
+  letter-spacing: 1px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.pricing__card-name {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #00e8da;
+  display: inline-block;
+  width: max-content;
+  padding: 1rem 2rem;
+  color: #1d1e42;
+  border-radius: 100rem;
 }
 .pricing__card-price--now {
   font-size: 4rem;
-  color: #00e8da;
   font-weight: bold;
   line-height: 1.6;
   font-family: "Poppins", sans-serif;
@@ -1213,10 +1252,10 @@ table {
     font-size: 3rem;
   }
 }
-.pricing__card__price-old {
+.pricing__card-price--old {
   font-size: 2rem;
   font-family: "Poppins", sans-serif;
-  color: #141432;
+  color: #ff6565;
   text-decoration: line-through;
   font-weight: 500;
 }
@@ -1224,7 +1263,13 @@ table {
   margin-top: auto;
 }
 .pricing__card:hover {
-  border-color: #9679f2;
+  box-shadow: 9px 11px 44px rgba(20, 20, 50, 0.1);
+}
+@media only screen and (max-width: 48em) {
+  .pricing__card {
+    padding: 2rem;
+    padding-top: 6rem;
+  }
 }
 
 .list {
@@ -1264,6 +1309,10 @@ table {
 .header .slot__box {
   display: flex;
   align-items: center;
+  padding: 8px;
+  padding-left: 2rem;
+  background: #00e8da;
+  border-radius: 10px;
 }
 @media only screen and (max-width: 48em) {
   .header .slot__box {
@@ -1283,8 +1332,8 @@ table {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  color: #141432;
   font-size: 2rem;
+  font-weight: 600;
 }
 .header-bg {
   position: absolute;
@@ -1296,17 +1345,24 @@ table {
 }
 
 .pricing {
-  padding-bottom: 20rem;
+  padding: 4rem 0;
+  padding-bottom: 1rem;
   position: relative;
+  margin-bottom: 10rem;
+}
+.pricing .container__small {
+  max-width: 100rem;
+  padding: 0;
 }
 .pricing .card {
   margin-bottom: 3rem;
 }
-.pricing-bg {
+.pricing__img {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  width: 100%;
+  width: 45%;
+  height: 100%;
   z-index: -1;
 }
 
@@ -1323,12 +1379,12 @@ table {
 }
 
 .analytics {
-  padding-bottom: 20rem;
-}
-@media only screen and (max-width: 48em) {
-  .analytics {
-    padding-bottom: 8rem;
-  }
+  padding: 10rem 0;
+  margin-bottom: 10rem;
+  background: url(../img/analytics-bg.png);
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
 }
 .analytics__content {
   padding: 3rem 0;
@@ -1383,13 +1439,27 @@ table {
 }
 
 .what-you-will-learn {
-  padding-top: 30rem;
-  padding-bottom: 10rem;
-  background: #1d1e42;
-  margin-top: -15rem;
+  padding: 5rem 0;
+  position: relative;
 }
 .what-you-will-learn .learn__container {
-  max-width: 117rem;
+  max-width: 107rem;
+}
+.what-you-will-learn .learn__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+@media only screen and (max-width: 48em) {
+  .what-you-will-learn {
+    background: #1d1e42;
+  }
+  .what-you-will-learn .learn__img {
+    display: none;
+  }
 }
 
 .footer {
@@ -2031,7 +2101,6 @@ a:hover {
 }
 
 .accodion-img-shape {
-  height: 300px;
   background: url(../img/community-bg.png) no-repeat;
   background-size: cover;
   background-position: center center;
@@ -2163,7 +2232,7 @@ a:hover {
 }
 
 section.right-group {
-  padding-bottom: 10rem;
+  padding-bottom: 4rem;
 }
 
 .mumber-slider-sec .row {
@@ -2177,6 +2246,46 @@ section.right-group {
   bottom: 0;
   transform: translateY(-17%);
   object-fit: cover;
+}
+
+section.bull-run {
+  padding: 10rem 0;
+  background: url(../img/bull-run-bg.png);
+  background-size: cover;
+  margin-bottom: 10rem;
+}
+
+section.elit-subs {
+  padding-top: 0;
+  padding-bottom: 3rem;
+  position: relative;
+  margin-bottom: 10rem;
+}
+section.elit-subs .elit__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  z-index: -1;
+}
+@media only screen and (max-width: 48em) {
+  section.elit-subs {
+    background: #524fed;
+  }
+  section.elit-subs .elit__img {
+    display: none;
+  }
+}
+
+.feadback-active .owl-stage-outer {
+  padding: 50px 0;
+}
+.feadback-active .owl-nav {
+  justify-content: center;
+}
+.feadback-active img {
+  filter: drop-shadow(-7px 11px 17px rgba(0, 0, 0, 0.09));
 }
 
 /* XL Device :1200px. */

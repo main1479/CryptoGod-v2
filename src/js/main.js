@@ -57,3 +57,31 @@ $('.mumber-active').owlCarousel({
 		},
 	},
 });
+
+$('.feadback-active').owlCarousel({
+	items: 4,
+	nav: true,
+	navText: [prevIcon, nextIcon],
+	dot: true,
+	loop: true,
+	margin: 40,
+	center: true,
+	autoplay: true,
+	autoplayTimeout: 3000,
+	smartSpeed: 1000,
+	responsiveClass: true,
+	responsive: {
+		0: {
+			items: 2,
+		},
+		768: {
+			items: 3,
+		},
+		992: {
+			items: 4,
+		},
+		1000: {
+			items: 5,
+		},
+	},
+});

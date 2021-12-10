@@ -593,7 +593,7 @@ a:hover {
 }
 
 .accodion-img-shape {
-	height: 300px;
+	// height: 300px;
 	// background: ;
 	background: url(../img/community-bg.png) no-repeat;
 	background-size: cover;
@@ -739,7 +739,8 @@ a:hover {
 }
 
 section.right-group {
-	padding-bottom: 10rem;
+	// padding-bottom: 10rem;
+	padding-bottom: 4rem;
 }
 
 .mumber-slider-sec {
@@ -754,4 +755,44 @@ section.right-group {
 	bottom: 0;
 	transform: translateY(-17%);
 	object-fit: cover;
+}
+
+section.bull-run {
+	padding: 10rem 0;
+	background: url(../img/bull-run-bg.png);
+	background-size: cover;
+	margin-bottom: 10rem;
+}
+
+section.elit-subs {
+	padding-top: 0;
+	padding-bottom: 3rem;
+	position: relative;
+	margin-bottom: 10rem;
+	.elit__img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 80%;
+		height: 100%;
+		z-index: -1;
+	}
+	@media only screen and (max-width: $tab-port) {
+		background: $color-primary;
+		.elit__img {
+			display: none;
+		}
+	}
+}
+
+.feadback-active {
+	.owl-stage-outer {
+		padding: 50px 0;
+	}
+	.owl-nav {
+		justify-content: center;
+	}
+	img {
+		filter: drop-shadow(-7px 11px 17px rgba(0, 0, 0, 0.09));
+	}
 }

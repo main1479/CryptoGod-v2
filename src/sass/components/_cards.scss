@@ -1,16 +1,42 @@
 .pricing__card {
-	background: $color-bg-primary;
 	padding: 4rem;
-	border-radius: 2rem;
 	transition: all 0.3s;
-	border: 3px solid transparent;
 	display: flex;
 	flex-direction: column;
 	min-height: 58rem;
+	box-shadow: 9px 11px 44px rgba(20, 20, 50, 0.04);
+	border-radius: 20px;
+	background: #fff;
+	position: relative;
+
+	.badge {
+		position: absolute;
+		top: 0;
+		right: 20px;
+		padding: 1rem 2rem;
+		background: #000;
+		border-radius: 0;
+		color: #fff;
+		letter-spacing: 1px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+
+	&-name {
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		background: $color-secondary;
+		display: inline-block;
+		width: max-content;
+		padding: 1rem 2rem;
+		color: #1d1e42;
+
+		border-radius: 100rem;
+	}
 
 	&-price--now {
 		font-size: 4rem;
-		color: $color-secondary;
 		font-weight: bold;
 		line-height: 1.6;
 		font-family: $font-primary;
@@ -18,10 +44,10 @@
 			font-size: 3rem;
 		}
 	}
-	&__price-old {
+	&-price--old {
 		font-size: 2rem;
 		font-family: $font-primary;
-		color: $color-text;
+		color: #ff6565;
 		text-decoration: line-through;
 		font-weight: 500;
 	}
@@ -31,6 +57,11 @@
 	}
 
 	&:hover {
-		border-color: #9679f2;
+		box-shadow: 9px 11px 44px rgba(20, 20, 50, 0.1);
+	}
+
+	@media only screen and (max-width: $tab-port) {
+		padding: 2rem;
+		padding-top: 6rem;
 	}
 }
