@@ -11,13 +11,12 @@ h1.heading {
 h1.heading .hat-element,
 h1.heading .bell-element {
   position: absolute;
-  top: -30%;
+  top: -4rem;
   left: 0;
   transform: translateX(-50%);
   width: clamp(4rem, 4vw, 6rem);
 }
 h1.heading .hat-element {
-  top: -40%;
   left: 1%;
 }
 @media only screen and (max-width: 48em) {
@@ -1143,6 +1142,9 @@ table {
     font-size: 14px;
   }
 }
+.btn:focus {
+  box-shadow: none;
+}
 .btn__outlined {
   background: none;
   border: 2px solid currentColor;
@@ -1289,22 +1291,19 @@ table {
   position: relative;
   padding-bottom: 10rem;
 }
-.header .header__content-fluid {
-  margin: 0;
-  padding-left: 7%;
-}
-@media only screen and (max-width: 64em) {
-  .header .header__content-fluid {
-    padding-left: 15px;
-  }
-}
 .header .header__img {
   width: 100%;
   transform: translateX(-4%) scale(1.2);
+  transform-origin: left center;
 }
 @media only screen and (max-width: 64em) {
   .header .header__img {
     transform: translateX(0%) scale(1.2);
+  }
+}
+@media only screen and (max-width: 62em) {
+  .header .header__img {
+    transform: translateX(0%) scale(1.1);
   }
 }
 .header .slot__box {
@@ -1798,7 +1797,7 @@ a:hover {
 .section-title p {
   font-size: 16px;
   opacity: 0.7;
-  margin: 0px 110px;
+  margin: 30px auto;
 }
 
 .people-content-title {
@@ -1997,6 +1996,14 @@ a:hover {
     display: none;
   }
 }
+@media only screen and (max-width: 23.75em) {
+  .accodion-area .container {
+    padding: 0;
+  }
+  .accodion-area .card-body p {
+    font-size: 13px;
+  }
+}
 
 .aplication-content-tabs .card {
   border: 0;
@@ -2019,7 +2026,7 @@ a:hover {
   display: block;
   position: relative;
   color: #fff;
-  padding: 12px 30px 12px 30px;
+  padding: 12px 40px 12px 30px;
   margin: 10px 0;
   font-size: 18px;
   font-weight: 500;
@@ -2031,6 +2038,11 @@ a:hover {
 .btn.btn-link br {
   display: block !important;
 }
+@media only screen and (max-width: 23.75em) {
+  .btn.btn-link {
+    font-size: 15px;
+  }
+}
 
 .card-body {
   padding: 0px 30px 30px 30px;
@@ -2040,7 +2052,8 @@ a:hover {
 .aplication-content-tabs .btn.btn-link::before {
   content: "+";
   position: absolute;
-  top: -17%;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
   font-size: 25px;
   padding: 13px 20px;
@@ -2050,7 +2063,8 @@ a:hover {
   position: absolute;
   content: "-";
   color: #fff;
-  top: -17%;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
   font-size: 25px;
   padding: 13px 23px;
@@ -2096,8 +2110,8 @@ a:hover {
 .accodion-area .section-title p {
   font-size: 16px;
   opacity: 0.7;
-  margin: 0px 110px;
-  margin-left: 0;
+  margin: 0px auto;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
@@ -2330,10 +2344,6 @@ section.elit-subs .elit__img {
     margin-left: 20px;
   }
 
-  .btn.btn-link {
-    font-size: 16px;
-  }
-
   .footer-widget p {
     padding-right: 129px;
   }
@@ -2432,10 +2442,6 @@ section.elit-subs .elit__img {
   .ourprivet-content-right a {
     font-size: 14px;
     width: 180px;
-  }
-
-  .btn.btn-link {
-    font-size: 12px;
   }
 
   .accodion-img-title h3 {
@@ -2621,10 +2627,6 @@ section.elit-subs .elit__img {
 
   .accordion .card .btn-link br {
     display: block;
-  }
-
-  .btn.btn-link {
-    font-size: 14px;
   }
 
   .accodion-img-shape {

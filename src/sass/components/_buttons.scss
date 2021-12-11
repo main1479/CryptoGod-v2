@@ -8,6 +8,10 @@
 		font-size: 14px;
 	}
 
+	&:focus {
+		box-shadow: none;
+	}
+
 	&__outlined {
 		background: none;
 		border: 2px solid currentColor;

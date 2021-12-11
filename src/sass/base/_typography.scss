@@ -11,13 +11,12 @@ h1.heading {
 	.hat-element,
 	.bell-element {
 		position: absolute;
-		top: -30%;
+		top: -4rem;
 		left: 0;
 		transform: translateX(-50%);
 		width: clamp(4rem, 4vw, 6rem);
 	}
 	.hat-element {
-		top: -40%;
 		left: 1%;
 	}
 	@media only screen and (max-width: $tab-port) {

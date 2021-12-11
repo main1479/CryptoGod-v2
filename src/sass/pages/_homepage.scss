@@ -287,7 +287,7 @@ a:hover {
 .section-title p {
 	font-size: 16px;
 	opacity: 0.7;
-	margin: 0px 110px;
+	margin: 30px auto;
 }
 
 .people-content-title {
@@ -486,6 +486,15 @@ a:hover {
 			display: none;
 		}
 	}
+	@media only screen and (max-width: $mbl-small) {
+		.container {
+			padding: 0;
+		}
+
+		.card-body p {
+			font-size: 13px;
+		}
+	}
 }
 
 .aplication-content-tabs .card {
@@ -509,7 +518,7 @@ a:hover {
 	display: block;
 	position: relative;
 	color: #fff;
-	padding: 12px 30px 12px 30px;
+	padding: 12px 40px 12px 30px;
 	margin: 10px 0;
 	font-size: 18px;
 	font-weight: 500;
@@ -521,6 +530,10 @@ a:hover {
 	br {
 		display: block !important;
 	}
+
+	@media only screen and (max-width: $mbl-small) {
+		font-size: 15px;
+	}
 }
 
 .card-body {
@@ -531,7 +544,8 @@ a:hover {
 .aplication-content-tabs .btn.btn-link::before {
 	content: '+';
 	position: absolute;
-	top: -17%;
+	top: 50%;
+	transform: translateY(-50%);
 	right: 0;
 	font-size: 25px;
 	padding: 13px 20px;
@@ -541,7 +555,8 @@ a:hover {
 	position: absolute;
 	content: '-';
 	color: #fff;
-	top: -17%;
+	top: 50%;
+	transform: translateY(-50%);
 	right: 0;
 	font-size: 25px;
 	padding: 13px 23px;
@@ -587,8 +602,8 @@ a:hover {
 .accodion-area .section-title p {
 	font-size: 16px;
 	opacity: 0.7;
-	margin: 0px 110px;
-	margin-left: 0;
+	margin: 0px auto;
+	margin-top: 30px;
 	margin-bottom: 50px;
 }
 
